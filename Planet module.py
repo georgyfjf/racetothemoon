@@ -30,18 +30,20 @@ def vect_sum(r1, ang1, r2, ang2):
 
 class Planet:
 
-    def __init__(self, r, ang, m, R, v):
+    def __init__(self, r, ang, m, R, v, w):
         '''
         :param r: first coordinate
         :param ang: second coordinate
         :param m: mass
         :param R: radius
-        :param v: angular velocity
+        :param v: angular orbital velocity
+        :param w: angular velocity
         '''
         self.m = m
         self.r0 = (r, ang)
         self.radius = R
         self.v = v
+        self.w = w
 
     def coord(self, t):  # Returns current coordinate
         if self.r0[1] is not None:
@@ -69,8 +71,8 @@ class Planet:
         pass
 
 
-Earth = Planet(0, None, 5.9726 * 10 ** 24, 6371000, 0)
-Moon = Planet(384467000, 0, 7.3477 * 10 ** 22, 1737100, 2 * math.pi / (27 * 24 * 60 * 60))
+Earth = Planet(0, None, 5.9726 * 10 ** 24, 6371000, 0, 7.292)
+Moon = Planet(384467000, 0, 7.3477 * 10 ** 22, 1737100, 2 * math.pi / (27 * 24 * 60 * 60), 0)
 
 
 

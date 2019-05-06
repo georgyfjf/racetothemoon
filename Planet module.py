@@ -73,8 +73,6 @@ Earth = Planet(0, None, 5.9726 * 10 ** 24, 6371000, 0)
 Moon = Planet(384467000, 0, 7.3477 * 10 ** 22, 1737100, 2 * math.pi / (27 * 24 * 60 * 60))
 
 
-print(Earth.gravity(Earth.radius, 2, 0))
-
 
 
 

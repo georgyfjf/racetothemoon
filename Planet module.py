@@ -54,7 +54,6 @@ class Planet:
     def dist_surf(self, r, ang, t):  # Returns distance to the surface
         r1 = self.coord(t)
         if self.r0[1] is not None:
-            print(vect_sum(r, ang, r1[0], (r1[1] + math.pi) % (2 * math.pi)))
             return vect_sum(r, ang, r1[0], (r1[1] + math.pi) % (2 * math.pi))[0] - self.radius
         else:
             return r - self.radius

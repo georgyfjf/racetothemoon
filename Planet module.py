@@ -70,10 +70,10 @@ class Planet:
         pass
 
 
-Earth = Planet(0, None, 5.9726 * 10 ** 24, 6371000, 0, 7.292)
+Earth = Planet(0, None, 5.9726 * 10 ** 24, 6371000, 0, 7.292 * 10**(-5))
 Moon = Planet(384467000, 0, 7.3477 * 10 ** 22, 1737100, 2 * math.pi / (27 * 24 * 60 * 60), 0)
 
-
+print(Moon.dist_surf(100000, math.pi/2, 0))
 
 
 
